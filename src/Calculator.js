@@ -25,7 +25,6 @@ export default class Calculator extends React.Component{
             });
 
         }
-        //history.push(digit);
     }
     deleteLastdigit(digit){
         const{ displayValue, pendingOperation} = this.state;
@@ -55,9 +54,11 @@ export default class Calculator extends React.Component{
         }
     }
     inputAllClear() {
-        const { displayValue } = this.state;
+        const { displayValue, history } = this.state;
+
         this.setState({
-            displayValue: "0"
+            displayValue: "0",
+            history : []
         });
     }
     inputPlusMinus() {
@@ -97,7 +98,9 @@ export default class Calculator extends React.Component{
         } else if (operator) {
             const currentValue = value || 0;
             const newValue = operations[operator](currentValue, inputValue);
-            history.push(newValue + "\n");
+            if(history[history.length-2] != newValue){
+                history.push(newValue);
+            }
 
             this.setState({
                 value: newValue,
@@ -121,7 +124,11 @@ export default class Calculator extends React.Component{
             <div className="Calculator">
                 <div id="display-screen">
                     <div id="display">{displayValue}</div>
-                    <div>{this.state.history.map((newValue) => newValue)}</div>
+                    <div>
+                        <ul>
+                         {this.state.history.map((newValue) => <li>{newValue}</li>)}
+                        </ul>
+                    </div>
                 </div>
                 <div className="keypad">
                     <div className="input-keys">
