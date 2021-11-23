@@ -6,22 +6,26 @@ export default class Calculator extends React.Component{
         value: null,
         displayValue: "0",
         operator: null,
-        pendingOperation: false
+        pendingOperation: false,
+        history : []
     };
 
     inputNumber(digit) {
-        const { displayValue, pendingOperation } = this.state;
+        const { displayValue, pendingOperation, history } = this.state;
 
         if (pendingOperation) {
             this.setState({
                 displayValue: String(digit),
                 pendingOperation: false
             });
+
         } else {
             this.setState({
                 displayValue: displayValue === "0" ? String(digit) : displayValue + digit
             });
+
         }
+        //history.push(digit);
     }
     deleteLastdigit(digit){
         const{ displayValue, pendingOperation} = this.state;
@@ -73,6 +77,7 @@ export default class Calculator extends React.Component{
     }
 
     operations(nextOperator) {
+
         const operations = {
             "/": (prevValue, nextValue) => prevValue / nextValue,
             "*": (prevValue, nextValue) => prevValue * nextValue,
@@ -80,8 +85,9 @@ export default class Calculator extends React.Component{
             "+": (prevValue, nextValue) => prevValue + nextValue,
             "=": (prevValue, nextValue) => nextValue
         };
-        const { displayValue, operator, value } = this.state;
-
+        const { displayValue, operator, value, history } = this.state;
+        history.push(displayValue);
+        history.push(nextOperator);
         const inputValue = parseFloat(displayValue);
 
         if (value == null) {
@@ -91,6 +97,7 @@ export default class Calculator extends React.Component{
         } else if (operator) {
             const currentValue = value || 0;
             const newValue = operations[operator](currentValue, inputValue);
+            history.push(newValue + "\n");
 
             this.setState({
                 value: newValue,
@@ -102,14 +109,19 @@ export default class Calculator extends React.Component{
             pendingOperation: true,
             operator: nextOperator
         });
+
+
+
     }
 
     render() {
+
         const { displayValue } = this.state;
         return (
             <div className="Calculator">
                 <div id="display-screen">
                     <div id="display">{displayValue}</div>
+                    <div>{this.state.history.map((newValue) => newValue)}</div>
                 </div>
                 <div className="keypad">
                     <div className="input-keys">
@@ -260,6 +272,7 @@ export default class Calculator extends React.Component{
                         >
                             &#61;
                         </button>
+
                     </div>
                 </div>
             </div>
