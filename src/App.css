@@ -2,90 +2,139 @@
 
 
 
-/**Code pour CSS Coco**/
 
 .leCadre{
-  background-color: whitesmoke;
-  width: 500px;
-  height: 400px;
-  padding: 5px;
-  margin: 10px;
-  border:  2px black;
-  border-bottom-color: white;
-  border-radius: 25px;
+background-color: whitesmoke;
+width: 500px;
+height: 400px;
+padding: 5px;
+margin: 10px;
+border:  2px black;
+border-bottom-color: white;
+border-radius: 25px;
 }
 .monTitre{
-  text-align: center;
+text-align: center;
 }
 .monResultat{
-  width: 465px;
-  height: 65px;
-  padding: 5px;
-  margin: 10px;
-  border: solid 2px black;
+width: 465px;
+height: 65px;
+padding: 5px;
+margin: 10px;
+border: solid 2px black;
+}
+.unBTNSupr{
+background-color: #c8ad7f;
+font-size: 15px;
+width: auto;
+height: 65px;
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
+}
+.unBTNSupr:hover{
+background-color: white;
+font-size: 15px;
+width: auto;
+height: 65px;
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
 }
 .unBTNRes{
-  alignment: right;
-  width: auto;
-  height: 20px;
-  font-size: 10px;
+alignment: right;
+background-color: #c8ad7f;
+font-size: 15px;
+width: auto;
+height: 65px;
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
+}
+.unBTNRes:hover{
+alignment: right;
+background-color: white;
+font-size: 15px;
+width: auto;
+height: 65px;
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
 }
 .monCadreRes{
-  width: 465px;
-  height: 65px;
-  padding: 5px;
-  margin: 10px;
-  border: solid 2px black;
-  font-size: 30px;
-  border-radius: 25px;
+width: 465px;
+height: 65px;
+padding: 5px;
+margin: 10px;
+border: solid 2px black;
+font-size: 30px;
+border-radius: 25px;
 }
 .unP{
-  text-align: center;
+text-align: center;
 }
 .maListe{
-  text-align: right;
+text-align: right;
+font-size: 20px;
 }
 .unEleList{
-  list-style: none;
+list-style: none;
 }
 .unBouton{
-  background-color: #c8ad7f;
-  font-size: 30px;
-  width: 65px;
-  height: 65px;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 25px;
+background-color: #c8ad7f;
+font-size: 30px;
+width: 65px;
+height: 65px;
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
+}
+.unBouton:hover{
+background-color: white;
+font-size: 30px;
+width: 65px;
+height: 65px;
+padding: 5px;
+margin: 5px;
+border-radius: 25px;
 }
 .allClavier{
-  border-radius: 25px;
-  background-color: grey;
-  display: flex;
-  flex-direction: row;
+border-radius: 25px;
+background-color: grey;
+display: flex;
+flex-direction: row;
 }
 .monClavier{
-  width: 270px;
-  height: auto;
-  padding: 5px;
-  margin: 10px;
+width: 270px;
+height: auto;
+padding: 5px;
+margin: 10px;
 }
 .monClavierOp{
-  width: 80px;
-  height: auto;
-  padding: 5px;
-  margin: 10px;
+width: 80px;
+height: auto;
+padding: 5px;
+margin: 10px;
 }
 .monClavierSupr{
-  width: 80px;
-  height: auto;
-  padding: 5px;
-  margin: 10px;
+width: 80px;
+height: auto;
+padding: 5px;
+margin: 10px;
 }
 .unBoutonEgale{
-  background-color: #c8ad7f;
-  width: 135px;
-  height: 65px;
-  padding: 5px;
-  margin: 10px;
-  border-radius: 25px;
+background-color: #c8ad7f;
+width: 135px;
+height: 65px;
+padding: 5px;
+margin: 10px;
+border-radius: 25px;
+}
+.unBoutonEgale:hover{
+background-color: white;
+width: 135px;
+height: 65px;
+padding: 5px;
+margin: 10px;
+border-radius: 25px;
 }
