@@ -1,174 +1,91 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100|Roboto:100");
 
-html {
-  box-sizing: border-box;
-}
 
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
 
-  margin: 0;
-}
+/**Code pour CSS Coco**/
 
-button {
-  font-family: inherit;
-
-  display: block;
-
-  padding: 0;
-
-  cursor: pointer;
-
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.wrapper {
-  display: flex;
-
-  height: 100vh;
-
-  background: radial-gradient(
-          rgba(88, 214, 141, 0.8),
-          rgba(88, 214, 141, 0.9)
-  );
-
-  justify-content: center;
-  align-items: center;
-}
-
-#app {
-  position: relative;
-
-  width: 320px;
-  height: 500px;
-}
-
-.Calculator {
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(33, 33, 33, 1);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-}
-
-/* Display */
-
-#display-screen {
-  display: inline-block;
-  line-height: 100px;
-  color: rgba(236, 240, 241, 0.7);
-  flex: 1;
-  overflow: hidden;
-
-}
-
-#display {
-  position: absolute;
-  font-size: 64px;
-  padding-right: 20px;
-  right: 0;
-  transform-origin: right;
-}
-
-/* Keypad */
-
-.keypad {
-  display: flex;
-
+.leCadre{
+  background-color: whitesmoke;
+  width: 500px;
   height: 400px;
+  padding: 5px;
+  margin: 10px;
+  border:  2px black;
+  border-bottom-color: white;
+  border-radius: 25px;
 }
-
-button.calc-btn {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  line-height: 80px;
-  padding: 0;
-  color: rgba(236, 240, 241, 0.7);
-  border: none;
-  border-radius: 50%;
-  transition: 300ms ease-in-out;
+.monTitre{
+  text-align: center;
 }
-
-.calc-btn:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(
-          rgba(88, 214, 141, 0.01),
-          rgba(88, 214, 141, 0.06)
-  );
-  border-radius: 50px;
-  transform: scale(0);
-  transition: transform 150ms ease-in-out;
+.monResultat{
+  width: 465px;
+  height: 65px;
+  padding: 5px;
+  margin: 10px;
+  border: solid 2px black;
 }
-button.calc-btn:active:before {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+.unBTNRes{
+  alignment: right;
+  width: auto;
+  height: 20px;
+  font-size: 10px;
 }
-/* Input Keys */
-
-.Calculator .input-keys {
-  width: 240px;
+.monCadreRes{
+  width: 465px;
+  height: 65px;
+  padding: 5px;
+  margin: 10px;
+  border: solid 2px black;
+  font-size: 30px;
+  border-radius: 25px;
 }
-
-/* Function Keys */
-
-.Calculator .function-keys {
-  display: flex;
+.unP{
+  text-align: center;
 }
-
-.Calculator .function-keys .calc-btn {
-  font-size: 2.25em;
+.maListe{
+  text-align: right;
 }
-
-.Calculator .function-keys #clear {
-  color: rgba(0, 151, 167, 1);
+.unEleList{
+  list-style: none;
 }
-
-/* Number Keys */
-
-.Calculator .number-keys {
+.unBouton{
+  background-color: #c8ad7f;
+  font-size: 30px;
+  width: 65px;
+  height: 65px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 25px;
+}
+.allClavier{
+  border-radius: 25px;
+  background-color: grey;
   display: flex;
   flex-direction: row;
-
-  flex-wrap: wrap-reverse;
 }
-
-.Calculator .number-keys .calc-btn {
-  font-size: 2.5em;
+.monClavier{
+  width: 270px;
+  height: auto;
+  padding: 5px;
+  margin: 10px;
 }
-
-.Calculator .number-keys #zero {
-  width: 160px;
-  padding-left: 32px;
-
-  text-align: left;
+.monClavierOp{
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  margin: 10px;
 }
-
-.Calculator .number-keys #decimal {
-  font-size: 3em;
-  left: 0;
+.monClavierSupr{
+  width: 80px;
+  height: auto;
+  padding: 5px;
+  margin: 10px;
 }
-
-/* Operator Keys */
-
-.Calculator .operator-keys #equals {
-  color: rgba(0, 151, 167, 1);
-}
-
-.Calculator .operator-keys .calc-btn {
-  font-size: 3em;
-
-  border-right: none;
+.unBoutonEgale{
+  background-color: #c8ad7f;
+  width: 135px;
+  height: 65px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 25px;
 }
